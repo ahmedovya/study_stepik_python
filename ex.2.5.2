@@ -10,18 +10,22 @@
 s = [int(i) for i in input().split()]
 t = []
 long = len(s)-1
-if len(s)==1:
+if len(s)==0:
     print(str(0))
 else:
     for i in range(0,len(s)):
-        if i==0:
-            k = s[i+1] + s[-1]
-            t.append(k)
-        elif i>0 and i<long:
-            k = s[i-1] + s[i+1]
-            t.append(k)
-        elif i == long:
-            k = s[i-1] + s[0]
+        if len(s)>1:
+            if i==0:
+                k = s[i+1] + s[-1]
+                t.append(k)
+            elif i>0 and i<long:
+                k = s[i-1] + s[i+1]
+                t.append(k)
+            elif i == long:
+                k = s[i-1] + s[0]
+                t.append(k)
+        elif len(s)==1:
+            k = s[i]
             t.append(k)
 for i in range(0,len(t)):
     print(str(t[i])+' ', end='')
