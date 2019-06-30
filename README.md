@@ -1,2 +1,2 @@
 # study_stepik_python
-python study courses
+It's a Python study courses exercises in Stepik platform.
